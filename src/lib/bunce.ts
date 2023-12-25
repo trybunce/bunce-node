@@ -35,6 +35,8 @@ export class Bunce extends EventEmitter {
       return `https://api.bunce.so/${version}`
     }
 
-    return config?.baseURL.includes('base.so/v') ? config?.baseURL : config?.baseURL + `/${version}`
+    return config?.baseURL.includes('bunce.so/v')
+      ? config?.baseURL
+      : config?.baseURL + `/${version}`
   }
 }

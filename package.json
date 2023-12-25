@@ -1,0 +1,47 @@
+{
+  "name": "bunce-node",
+  "version": "0.0.1",
+  "description": "Node SDK for Bunce APIs",
+  "main": "dist/index.js",
+  "packageManager": "pnpm@8.12.1",
+  "engines": {
+    "node": ">=18.16.1"
+  },
+  "engineStrict": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trybunce/bunce-node.git"
+  },
+  "keywords": [
+    "Bunce",
+    "API",
+    "Node",
+    "SDK",
+    "Customer Engagement"
+  ],
+  "author": "Damilare Anjorin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trybunce/bunce-node/issues"
+  },
+  "homepage": "https://github.com/trybunce/bunce-node#readme",
+  "scripts": {
+    "format": "prettier --write --cache \"./**/*.{js,ts,md}\"",
+    "format:check": "prettier --check \"./**/*.{js,ts,md}\"",
+    "lint": "eslint --cache .",
+    "lint:fix": "eslint . --cache --fix",
+    "postinstall": "simple-git-hooks",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@damilaredev/eslint-config": "^0.0.19",
+    "@types/node": "^20.10.5",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.3.3"
+  }
+}

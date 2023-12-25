@@ -26,12 +26,16 @@
   },
   "homepage": "https://github.com/trybunce/bunce-node#readme",
   "scripts": {
+    "build": "pnpm run '/^build:.*/'",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
     "format": "prettier --write --cache \"./**/*.{js,ts,md}\"",
     "format:check": "prettier --check \"./**/*.{js,ts,md}\"",
     "lint": "eslint --cache .",
     "lint:fix": "eslint . --cache --fix",
     "postinstall": "simple-git-hooks",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf 'node_modules' 'dist'"
   },
   "devDependencies": {
     "@damilaredev/eslint-config": "^0.0.19",
@@ -42,6 +46,7 @@
     "eslint-plugin-prettier": "^5.1.2",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.3.3",
     "vitest": "^1.1.0"

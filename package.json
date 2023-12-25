@@ -36,12 +36,17 @@
   "devDependencies": {
     "@damilaredev/eslint-config": "^0.0.19",
     "@types/node": "^20.10.5",
+    "@vitest/coverage-v8": "^1.1.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "simple-git-hooks": "^2.9.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
   }
 }

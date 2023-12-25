@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "noUnusedParameters": false,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "moduleDetection": "force",
+    "removeComments": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declarationMap": true,
+    "strictPropertyInitialization": false,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "types": ["node", "vitest/globals"],
+    "skipLibCheck": true,
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules/**/*", "**/*.spec.ts", "vitest.config.ts"]
+}

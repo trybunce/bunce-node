@@ -23,10 +23,10 @@ export class Customers extends Http implements ICustomers {
   }
 
   async all(params?: CustomerQueryOptions): Promise<AxiosResponse<CustomersResponsePayload>> {
-    const toQuery = Object.keys(params ?? {})
-      .map((key) => `${key}=${(params as any)[key]}`)
-      .join('&')
-
-    return await this.http.get(`/customers?${toQuery}`)
+    return await this.http.get(`/customers`, {
+      params: params ?? {
+        page: 1,
+      },
+    })
   }
 }

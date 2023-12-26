@@ -2,8 +2,22 @@
   "name": "bunce-node",
   "version": "0.0.1",
   "description": "Node SDK for Bunce APIs",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/cjs/index.d.ts",
   "packageManager": "pnpm@8.12.1",
+  "private": "false",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/**",
+    "!**/*.spec.*",
+    "!**/*.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
   "engines": {
     "node": ">=18.16.1"
   },
@@ -35,7 +49,13 @@
     "lint:fix": "eslint . --cache --fix",
     "postinstall": "simple-git-hooks",
     "typecheck": "tsc --noEmit",
-    "clean": "rimraf 'node_modules' 'dist'"
+    "clean": "rimraf 'node_modules' 'dist'",
+    "test": "vitest run",
+    "test:watch": "vitest --watch",
+    "test:debug": "vitest --inspect-brk --inspect --logHeapUsage --threads=false"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
   },
   "devDependencies": {
     "@damilaredev/eslint-config": "^0.0.19",
@@ -50,8 +70,5 @@
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.3.3",
     "vitest": "^1.1.0"
-  },
-  "dependencies": {
-    "axios": "^1.6.2"
   }
 }

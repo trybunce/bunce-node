@@ -1,5 +1,5 @@
 import EventEmitter from 'node:events'
-import axios, { AxiosInstance } from 'axios'
+import axios, { type AxiosInstance } from 'axios'
 import { IConfig } from './bunce.interface'
 import { Customers } from './customers/customers'
 

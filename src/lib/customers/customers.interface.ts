@@ -1,4 +1,4 @@
-import { AxiosResponse } from 'axios'
+import type { AxiosResponse } from 'axios'
 export interface CreateCustomerRequestPayload {
   first_name: string
   last_name: string
@@ -41,9 +41,25 @@ export interface CustomersResponsePayload {
   }
 }
 
+export interface ResponsePayload<T = any> {
+  data: T
+  message: string
+  success: boolean
+}
+
 export interface ICustomers {
-  create(customer: CreateCustomerRequestPayload): Promise<AxiosResponse>
-  bulkCreate(customers: CreateBulkCustomerRequestPayload): Promise<AxiosResponse>
-  update(email: string, customer: UpdateCustomerRequestPayload): Promise<AxiosResponse>
-  all(query?: CustomerQueryOptions): Promise<AxiosResponse<CustomersResponsePayload>>
+  create(
+    customer: CreateCustomerRequestPayload,
+  ): Promise<AxiosResponse<ResponsePayload<CustomerPayload>>>
+  find(email: string): Promise<AxiosResponse<ResponsePayload<CustomerPayload>>>
+  bulkCreate(
+    customers: CreateBulkCustomerRequestPayload,
+  ): Promise<AxiosResponse<ResponsePayload<CustomerPayload[]>>>
+  update(
+    email: string,
+    customer: UpdateCustomerRequestPayload,
+  ): Promise<AxiosResponse<ResponsePayload>>
+  all(
+    query?: CustomerQueryOptions,
+  ): Promise<AxiosResponse<ResponsePayload<CustomersResponsePayload>>>
 }

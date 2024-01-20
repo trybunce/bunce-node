@@ -5,7 +5,7 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/cjs/index.d.ts",
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@8.14.1",
   "private": "false",
   "publishConfig": {
     "access": "public"
@@ -56,22 +56,22 @@
     "release": "bumpp package.json --commit --push --tag"
   },
   "dependencies": {
-    "axios": "^1.6.2"
+    "axios": "^1.6.5"
   },
   "devDependencies": {
     "@damilaredev/eslint-config": "^0.0.19",
-    "@types/node": "^20.10.5",
-    "@vitest/coverage-v8": "^1.1.0",
-    "bumpp": "^9.2.1",
+    "@types/node": "^20.11.5",
+    "@vitest/coverage-v8": "^1.2",
+    "bumpp": "^9.3.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "lint-staged": "^15.2.0",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.3.3",
-    "vitest": "^1.1.0"
+    "vitest": "^1.2"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

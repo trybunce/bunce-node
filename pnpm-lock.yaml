@@ -15,7 +15,7 @@ devDependencies:
     version: 0.0.19(eslint@8.56.0)(react@18.2.0)(typescript@5.3.3)
   '@types/node':
     specifier: ^20.11.5
-    version: 20.11.5
+    version: 20.11.26
   '@vitest/coverage-v8':
     specifier: ^1.2
     version: 1.2.1(vitest@1.2.1)
@@ -48,7 +48,7 @@ devDependencies:
     version: 5.3.3
   vitest:
     specifier: ^1.2
-    version: 1.2.1(@types/node@20.11.5)
+    version: 1.2.1(@types/node@20.11.26)
 
 packages:
 
@@ -696,8 +696,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node@20.11.5:
-    resolution: {integrity: sha512-g557vgQjUUfN76MZAN/dt1z3dzcUsimuysco0KeluHgrPdJXkP/XdAURgyO2W9fZWHRtRBiVKzKn8vyOAwlG+w==}
+  /@types/node@20.11.26:
+    resolution: {integrity: sha512-YwOMmyhNnAWijOBQweOJnQPl068Oqd4K3OFbTc6AHJwzweUwwWG3GIFY74OKks2PJUDkQPeddOQES9mLn1CTEQ==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -864,7 +864,7 @@ packages:
       std-env: 3.7.0
       test-exclude: 6.0.0
       v8-to-istanbul: 9.2.0
-      vitest: 1.2.1(@types/node@20.11.5)
+      vitest: 1.2.1(@types/node@20.11.26)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4193,7 +4193,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-node@1.2.1(@types/node@20.11.5):
+  /vite-node@1.2.1(@types/node@20.11.26):
     resolution: {integrity: sha512-fNzHmQUSOY+y30naohBvSW7pPn/xn3Ib/uqm+5wAJQJiqQsU0NBR78XdRJb04l4bOFKjpTWld0XAfkKlrDbySg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -4202,7 +4202,7 @@ packages:
       debug: 4.3.4
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 5.0.10(@types/node@20.11.5)
+      vite: 5.0.10(@types/node@20.11.26)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4214,7 +4214,7 @@ packages:
       - terser
     dev: true
 
-  /vite@5.0.10(@types/node@20.11.5):
+  /vite@5.0.10(@types/node@20.11.26):
     resolution: {integrity: sha512-2P8J7WWgmc355HUMlFrwofacvr98DAjoE52BfdbwQtyLH06XKwaL/FMnmKM2crF0iX4MpmMKoDlNCB1ok7zHCw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -4242,7 +4242,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.11.5
+      '@types/node': 20.11.26
       esbuild: 0.19.10
       postcss: 8.4.32
       rollup: 4.9.1
@@ -4250,7 +4250,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@1.2.1(@types/node@20.11.5):
+  /vitest@1.2.1(@types/node@20.11.26):
     resolution: {integrity: sha512-TRph8N8rnSDa5M2wKWJCMnztCZS9cDcgVTQ6tsTFTG/odHJ4l5yNVqvbeDJYJRZ6is3uxaEpFs8LL6QM+YFSdA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -4275,7 +4275,7 @@ packages:
       jsdom:
         optional: true
     dependencies:
-      '@types/node': 20.11.5
+      '@types/node': 20.11.26
       '@vitest/expect': 1.2.1
       '@vitest/runner': 1.2.1
       '@vitest/snapshot': 1.2.1
@@ -4294,8 +4294,8 @@ packages:
       strip-literal: 1.3.0
       tinybench: 2.5.1
       tinypool: 0.8.1
-      vite: 5.0.10(@types/node@20.11.5)
-      vite-node: 1.2.1(@types/node@20.11.5)
+      vite: 5.0.10(@types/node@20.11.26)
+      vite-node: 1.2.1(@types/node@20.11.26)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less

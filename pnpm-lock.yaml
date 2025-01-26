@@ -22,8 +22,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.4(vitest@3.0.4(@types/node@22.10.10)(jiti@2.4.2)(yaml@2.7.0))
       bumpp:
-        specifier: ^9.3.0
-        version: 9.10.2(magicast@0.3.5)
+        specifier: ^10.0.0
+        version: 10.0.1(magicast@0.3.5)
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
@@ -674,9 +674,9 @@ packages:
   builtins@5.1.0:
     resolution: {integrity: sha512-SW9lzGTLvWTP1AY8xeAMZimqDrIaSdLQUcVr9DMef51niJ022Ri87SwRRKYm4A6iHfkPaiVUu/Duw2Wc4J7kKg==}
 
-  bumpp@9.10.2:
-    resolution: {integrity: sha512-QX1JdswFLLVgrA+I/t+926/jsuJ92BTKKxGvMYC6fg+1lFpCl9RbILQJg0thc5UirIjQ6/jY1Sj+b4tz3evA5g==}
-    engines: {node: '>=10'}
+  bumpp@10.0.1:
+    resolution: {integrity: sha512-TBCR4FjNiubf+t6QFncNHJzCDwcz6SM2PPt/UoIGwGoe5ZTbSqu37nNJFlxBngWCUb1rYbf43ocNT1pPaNu5CQ==}
+    engines: {node: '>=18'}
     hasBin: true
 
   c12@2.0.1:
@@ -3060,7 +3060,7 @@ snapshots:
     dependencies:
       semver: 7.6.3
 
-  bumpp@9.10.2(magicast@0.3.5):
+  bumpp@10.0.1(magicast@0.3.5):
     dependencies:
       c12: 2.0.1(magicast@0.3.5)
       cac: 6.7.14

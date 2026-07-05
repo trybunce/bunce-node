@@ -63,7 +63,7 @@
     "@types/node": "^24.0.0",
     "@vitest/coverage-v8": "^4.0.0",
     "bumpp": "^11.0.0",
-    "eslint": "^8.56.0",
+    "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-prettier": "^5.1.2",
     "lint-staged": "^16.0.0",

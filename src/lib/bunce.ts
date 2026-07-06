@@ -1,7 +1,10 @@
 import EventEmitter from 'node:events'
 import axios, { type AxiosInstance } from 'axios'
-import { IConfig } from './bunce.interface'
+import type { IConfig } from './bunce.interface'
 import { Customers } from './customers/customers'
+import { Events } from './events/events'
+import { Messaging } from './messaging/messaging'
+import { Segments } from './segments/segments'
 
 export const SDKVersion = '0.0.1'
 
@@ -9,6 +12,9 @@ export class Bunce extends EventEmitter {
   private readonly apiKey?: string
   private readonly http: AxiosInstance
   readonly customers: Customers
+  readonly events: Events
+  readonly messaging: Messaging
+  readonly segments: Segments
 
   constructor(apiKey: string, config?: IConfig) {
     super()
@@ -26,6 +32,9 @@ export class Bunce extends EventEmitter {
       })
 
     this.customers = new Customers(this.http)
+    this.events = new Events(this.http)
+    this.messaging = new Messaging(this.http)
+    this.segments = new Segments(this.http)
   }
 
   private buildBaseUrl(config?: IConfig): string {
@@ -35,8 +44,6 @@ export class Bunce extends EventEmitter {
       return `https://api.bunce.so/${version}`
     }
 
-    return config?.baseURL.includes('bunce.so/v')
-      ? config?.baseURL
-      : config?.baseURL + `/${version}`
+    return /\/v\d+(?:\/)?$/.test(config.baseURL) ? config.baseURL : `${config.baseURL}/${version}`
   }
 }

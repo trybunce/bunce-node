@@ -1,9 +1,10 @@
 {
   "extends": "./tsconfig.base",
   "compilerOptions": {
-    "module": "commonjs",
-    "outDir": "dist/cjs",
-    "rootDir": "src",
+    "module": "ESNext",
+    "rootDir": ".",
     "typeRoots": ["./node_modules/@types"]
-  }
+  },
+  "include": ["src/**/*.ts", "tsdown.config.ts", "vitest.config.ts", "vitest-setup.ts"],
+  "exclude": ["node_modules/**/*", "dist/**/*", "coverage/**/*"]
 }

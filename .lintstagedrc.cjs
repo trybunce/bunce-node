@@ -1,4 +1,4 @@
 module.exports = {
-  '*.ts': ['pnpm run lint'],
-  '*': ['prettier --write --ignore-unknown . --cache'],
+  '*.{js,ts,json,md,yml,yaml}': ['oxfmt --write'],
+  '*.{js,ts}': ['oxlint --fix'],
 }

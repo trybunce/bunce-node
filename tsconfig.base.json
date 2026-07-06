@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "esModuleInterop": true,
@@ -19,7 +19,6 @@
     "declarationMap": true,
     "strictPropertyInitialization": false,
     "rootDir": ".",
-    "baseUrl": ".",
     "types": ["node"],
     "skipLibCheck": true
   },

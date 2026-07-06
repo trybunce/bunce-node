@@ -62,10 +62,10 @@
     "oxfmt": "^0.57.0",
     "oxlint": "^1.72.0",
     "rimraf": "^6.0.0",
-    "simple-git-hooks": "^2.9.0",
+    "simple-git-hooks": "^2.13.1",
     "tsdown": "^0.22.3",
     "typescript": "^6.0.0",
-    "vitest": "^4.0.0"
+    "vitest": "^4"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

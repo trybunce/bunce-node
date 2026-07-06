@@ -5,15 +5,13 @@ Node SDK for the Bunce API.
 ## Installation
 
 ```sh
-pnpm add bunce-node
+pnpm add @bunce/node
 ```
-
-> This package has not been published yet. Install from the repository while it is in development.
 
 ## Usage
 
 ```ts
-import { Bunce } from 'bunce-node'
+import { Bunce } from '@bunce/node'
 
 const bunce = new Bunce(process.env.BUNCE_API_KEY!)
 ```

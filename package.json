@@ -1,5 +1,5 @@
 {
-  "name": "bunce-node",
+  "name": "@bunce/node",
   "version": "0.0.1",
   "description": "Node SDK for Bunce APIs",
   "main": "./dist/index.cjs",

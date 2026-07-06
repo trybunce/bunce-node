@@ -2,24 +2,22 @@
   "name": "bunce-node",
   "version": "0.0.1",
   "description": "Node SDK for Bunce APIs",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "typings": "dist/cjs/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "packageManager": "pnpm@11.10.0",
-  "private": "false",
+  "private": false,
   "publishConfig": {
     "access": "public"
   },
   "files": [
     "dist/**",
-    "!**/*.spec.*",
-    "!**/*.json",
     "CHANGELOG.md",
     "LICENSE",
     "README.md"
   ],
   "engines": {
-    "node": ">=18.16.1"
+    "node": ">=20"
   },
   "engineStrict": true,
   "repository": {
@@ -40,40 +38,50 @@
   },
   "homepage": "https://github.com/trybunce/bunce-node#readme",
   "scripts": {
-    "build": "pnpm run '/^build:.*/'",
-    "build:main": "tsc -p tsconfig.json",
-    "build:module": "tsc -p tsconfig.module.json",
-    "format": "prettier --write --cache \"./**/*.{js,ts,md}\"",
-    "format:check": "prettier --check \"./**/*.{js,ts,md}\"",
-    "lint": "eslint --cache .",
-    "lint:fix": "eslint . --cache --fix",
-    "postinstall": "simple-git-hooks",
-    "typecheck": "tsc --noEmit",
-    "clean": "rimraf 'node_modules' 'dist'",
+    "build": "tsdown",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "clean": "rimraf 'dist' 'coverage'",
     "test": "vitest run",
     "test:watch": "vitest --watch",
     "test:debug": "vitest --inspect-brk --inspect --logHeapUsage --threads=false",
-    "release": "bumpp package.json --commit --push --tag"
+    "release": "bumpp package.json --commit --push --tag",
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "axios": "^1.6.5"
+    "axios": "^1.8"
   },
   "devDependencies": {
-    "@damilaredev/eslint-config": "^0.0.19",
     "@types/node": "^24.0.0",
     "@vitest/coverage-v8": "^4.0.0",
     "bumpp": "^11.0.0",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^10.0.0",
-    "eslint-plugin-prettier": "^5.1.2",
     "lint-staged": "^16.0.0",
-    "prettier": "^3.2.4",
+    "oxfmt": "^0.57.0",
+    "oxlint": "^1.72.0",
     "rimraf": "^6.0.0",
     "simple-git-hooks": "^2.9.0",
+    "tsdown": "^0.22.3",
     "typescript": "^6.0.0",
     "vitest": "^4.0.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
-  }
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "type": "module"
 }
